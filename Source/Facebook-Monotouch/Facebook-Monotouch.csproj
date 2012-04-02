@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{789B6E73-D8E7-448B-81D7-4CDC4E2BD5C6}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FacebookMonotouch</RootNamespace>
+    <AssemblyName>Facebook-Monotouch</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;CODE_ANALYSIS;SIMPLE_JSON_INTERNAL;FLUENTHTTP_URLENCODING;FLUENTHTTP_HTMLENCODING;FLUENTHTTP_CORE_TPL;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>TRACE;CODE_ANALYSIS;CODE_ANALYSIS;SIMPLE_JSON_INTERNAL;FLUENTHTTP_URLENCODING;FLUENTHTTP_HTMLENCODING;FLUENTHTTP_CORE_TPL;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="SimpleJson.cs" />
+    <Compile Include="CombinationStream.cs" />
+    <Compile Include="DateTimeConvertor.cs" />
+    <Compile Include="FacebookApiEventArgs.cs" />
+    <Compile Include="FacebookUploadProgressChangedEventArgs.cs">
+      <DependentUpon>FacebookApiEventArgs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookApiException.cs" />
+    <Compile Include="FacebookOAuthException.cs">
+      <DependentUpon>FacebookApiException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookApiLimitException.cs">
+      <DependentUpon>FacebookApiException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookBatchParameter.cs" />
+    <Compile Include="FacebookClient.cs" />
+    <Compile Include="FacebookClient.Async.cs">
+      <DependentUpon>FacebookClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookClient.Async.Tasks.cs">
+      <DependentUpon>FacebookClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookClient.Batch.Async.cs">
+      <DependentUpon>FacebookClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookClient.Batch.Async.Tasks.cs">
+      <DependentUpon>FacebookClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookClient.SignedRequest.cs">
+      <DependentUpon>FacebookClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookClient.OAuthResult.cs">
+      <DependentUpon>FacebookClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookMediaObject.cs" />
+    <Compile Include="FacebookMediaStream.cs" />
+    <Compile Include="FacebookOAuthResult.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="HttpMethod.cs" />
+    <Compile Include="HttpWebRequestCreatedEventArgs.cs" />
+  </ItemGroup>
+</Project>

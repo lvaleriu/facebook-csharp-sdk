@@ -9,19 +9,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8AAF74
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook-Monotouch", "Facebook-Monotouch\Facebook-Monotouch.csproj", "{789B6E73-D8E7-448B-81D7-4CDC4E2BD5C6}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Facebook.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{789B6E73-D8E7-448B-81D7-4CDC4E2BD5C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{789B6E73-D8E7-448B-81D7-4CDC4E2BD5C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{789B6E73-D8E7-448B-81D7-4CDC4E2BD5C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{789B6E73-D8E7-448B-81D7-4CDC4E2BD5C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{857E540C-0092-4590-A279-F98A6B77AC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{857E540C-0092-4590-A279-F98A6B77AC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{857E540C-0092-4590-A279-F98A6B77AC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{857E540C-0092-4590-A279-F98A6B77AC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Facebook\Facebook-SL5.csproj
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Facebook.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
